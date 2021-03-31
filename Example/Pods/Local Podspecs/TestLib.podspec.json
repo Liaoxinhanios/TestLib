@@ -1,6 +1,6 @@
 {
   "name": "TestLib",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "summary": "A short description of TestLib.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/Liaoxinhanios/TestLib",
@@ -13,10 +13,22 @@
   },
   "source": {
     "git": "https://github.com/Liaoxinhanios/TestLib.git",
-    "tag": "0.1.0"
+    "tag": "0.1.2"
   },
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "TestLib/Classes/**/*"
+  "source_files": "TestLib/Classes/**/*",
+  "subspecs": [
+    {
+      "name": "Category",
+      "source_files": "TestLib/Classes/Category/*.{h,m}",
+      "frameworks": "Foundation",
+      "dependencies": {
+        "AFNetworking": [
+          "4.0.1"
+        ]
+      }
+    }
+  ]
 }
